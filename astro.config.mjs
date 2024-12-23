@@ -4,25 +4,28 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://teofilosalgado.github.io',
+	base: 'vault',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Vault',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/teofilosalgado/vault',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label: 'Receitas',
+					autogenerate: { directory: 'Receitas' },
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: 'Mandarim',
+					autogenerate: { directory: 'Mandarim' },
 				},
 			],
+			customCss: [
+				'@fontsource-variable/inter',
+				'./src/styles/custom.css',
+			]
 		}),
 	],
 });
