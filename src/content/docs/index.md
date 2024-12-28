@@ -1,7 +1,7 @@
 ---
 title: Welcome to My Digital Garden
 tableOfContents: false
-description: Get started building your docs site with Starlight.
+description: teofilo.salgado's digital garden
 template: doc
 hero:
   tagline: |
