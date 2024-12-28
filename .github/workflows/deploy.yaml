@@ -22,7 +22,7 @@ jobs:
         with:
           submodules: true
         
-      - name: Pull & update submodules recursively
+      - name: Update submodules recursively
         run: |
           git submodule update --init --recursive
           git submodule update --recursive --remote
@@ -33,7 +33,12 @@ jobs:
           git config user.name "GitHub Actions"
           git add --all
           git commit -m "Update submodules." || echo "No changes to commit."
-          git push
+
+      - name: Push submodule update
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
 
       - name: Install, build, and upload your site
         uses: withastro/action@v3
