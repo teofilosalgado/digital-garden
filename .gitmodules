@@ -1,0 +1,3 @@
+[submodule "src/content/docs/vault"]
+	path = src/content/docs/vault
+	url = https://github.com/teofilosalgado/vault.git
