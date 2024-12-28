@@ -2,7 +2,7 @@ name: Deploy to GitHub Pages
 
 # Runs on new tags
 on:
-  workflow_dispatch
+  workflow_dispatch:
   push:
     tags:
       - "v*"
