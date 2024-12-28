@@ -8,7 +8,7 @@ export default defineConfig({
 	base: 'digital-garden',
 	integrations: [
 		starlight({
-			title: 'DigitalGarden',
+			title: 'teofilo.salgado',
 			description: 'My personal digital garden.',
 			social: {
 				github: 'https://github.com/teofilosalgado',
@@ -17,8 +17,24 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Vault',
-					autogenerate: { directory: 'vault' },
+					label: 'Projects',
+					autogenerate: { directory: 'vault/1. Projects' },
+					collapsed: false,
+				},
+				{
+					label: 'Areas',
+					autogenerate: { directory: 'vault/2. Areas' },
+					collapsed: false,
+				},
+				{
+					label: 'Resources',
+					autogenerate: { directory: 'vault/3. Resources' },
+					collapsed: false,
+				},
+				{
+					label: 'Archive',
+					autogenerate: { directory: 'vault/4. Archive' },
+					collapsed: false,
 				}
 			],
 			pagination: false,
