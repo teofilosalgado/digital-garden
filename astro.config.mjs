@@ -5,23 +5,24 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://teofilosalgado.github.io',
-	base: 'vault',
+	base: 'digital-garden',
 	integrations: [
 		starlight({
-			title: 'Vault',
+			title: 'DigitalGarden',
+			description: 'My personal digital garden.',
 			social: {
-				github: 'https://github.com/teofilosalgado/vault',
+				github: 'https://github.com/teofilosalgado',
+				linkedin: 'https://www.linkedin.com/in/teofilosalgado',
+				email: 'mailto:jvictorteo2000@hotmail.com'
 			},
 			sidebar: [
 				{
-					label: 'Receitas',
-					autogenerate: { directory: 'Receitas' },
-				},
-				{
-					label: 'Mandarim',
-					autogenerate: { directory: 'Mandarim' },
-				},
+					label: 'Vault',
+					autogenerate: { directory: 'vault' },
+				}
 			],
+			pagination: false,
+			tableOfContents: false,
 			customCss: [
 				'@fontsource-variable/inter',
 				'./src/styles/custom.css',

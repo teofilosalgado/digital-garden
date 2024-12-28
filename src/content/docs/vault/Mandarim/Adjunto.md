@@ -17,11 +17,13 @@ Em mandarim, os adjuntos **sempre** precedem seus núcleos, independentemente da
 | 这个     | 很聪明         | 的   | 女孩     |
 | ------ | ----------- | --- | ------ |
 | Aquela | Inteligente |     | Menina |
+
 Aquela menina inteligente.
 
 | 五个    | 高兴      | 的   | 中国       | 女孩      |
 | ----- | ------- | --- | -------- | ------- |
 | Cinco | Felizes |     | Chinesas | Meninas |
+
 Cinco meninas chinesas felizes.
 
 ## Diálogos
