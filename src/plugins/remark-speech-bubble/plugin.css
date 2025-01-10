@@ -1,0 +1,28 @@
+li[data-task]>p {
+    margin: 0px !important;
+}
+
+li[data-task="0"],
+li[data-task="1"],
+li[data-task="2"],
+li[data-task="3"],
+li[data-task="4"],
+li[data-task="5"],
+li[data-task="6"],
+li[data-task="7"],
+li[data-task="8"],
+li[data-task="9"] {
+    padding: 0.25rem 1rem;
+    max-width: fit-content;
+    border-radius: 0.25rem 0.625rem 0.625rem 0.625rem;
+    box-sizing: border-box;
+    color: var(--sl-color-black);
+}
+
+li[data-task="3"] {
+    background-color: var(--sl-color-green-high);
+}
+
+li[data-task="4"] {
+    background-color: var(--sl-color-blue-high);
+}

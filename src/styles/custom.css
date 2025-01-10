@@ -12,6 +12,10 @@
     margin-right: 0.25rem;
 }
 
+.sl-markdown-content ul {
+    padding-left: 0px !important;
+}
+
 .site-title span {
     font-weight: bold;
 }

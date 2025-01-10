@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import remarkSpeechBubble from './src/plugins/remark-speech-bubble/plugin';
 
 // https://astro.build/config
 export default defineConfig({
@@ -42,7 +43,13 @@ export default defineConfig({
 			customCss: [
 				'@fontsource-variable/inter',
 				'./src/styles/custom.css',
+				'./src/plugins/remark-speech-bubble/plugin.css',
 			]
 		}),
 	],
+	markdown: {
+		remarkPlugins: [
+			remarkSpeechBubble
+		]
+	}
 });
