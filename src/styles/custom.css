@@ -3,6 +3,27 @@
     --sl-font: 'Inter Variable', sans-serif;
 }
 
+.main-frame {
+    height: 100vh;
+}
+
+.main-frame>div {
+    height: 100%;
+}
+
+.main-pane {
+    height: 100%;
+}
+
+.main-pane>main {
+    height: 100%;
+    padding: 0px;
+}
+
+.sl-markdown-content {
+    height: 100%;
+}
+
 .sl-markdown-content .contains-task-list {
     padding-inline-start: 1rem;
     list-style: none;
@@ -49,4 +70,20 @@
     --sl-color-gray-6: #eeeeee;
     --sl-color-gray-7: #f6f6f6;
     --sl-color-black: #ffffff;
+}
+
+/* Excalidraw Wrapper */
+.excalidraw-wrapper {
+    min-width: 100%;
+    width: 100%;
+    min-height: 100%;
+    height: 100%;
+}
+
+.excalidraw-eye-dropper-container {
+    margin: 0px !important;
+}
+
+.excalidraw__canvas-wrapper {
+    margin: 0px !important;
 }

@@ -1,0 +1,51 @@
+---
+import type { Props } from "@astrojs/starlight/props";
+import "@astrojs/starlight/style/markdown.css";
+import lzString from "lz-string";
+
+import ExcalidrawWrapper from "../components/ExcalidrawWrapper";
+const { data } = Astro.props.entry;
+
+const isExcalidraw =
+    "excalidraw-plugin" in data &&
+    "tags" in data &&
+    Array.isArray(data.tags) &&
+    data.tags?.includes("excalidraw");
+
+function getExcalidrawData() {
+    const body = Astro.props.entry.body;
+    const expression = new RegExp(
+        "```compressed-json(?<content>[A-Z0-9+/=\n]+)```",
+        "i",
+    );
+    const match = body?.match(expression);
+
+    if (!match || !match?.groups || !match?.groups?.content) {
+        return {};
+    }
+
+    const content = match.groups.content;
+    const encoded = content.replace(/\s+/g, "");
+    const decoded = lzString.decompressFromBase64(encoded);
+    const result = JSON.parse(decoded);
+
+    if (!("elements" in result) || !("appState" in result)) {
+        return {};
+    }
+
+    return result;
+}
+---
+
+<div class="sl-markdown-content">
+    {
+        isExcalidraw ? (
+            <ExcalidrawWrapper
+                client:only="react"
+                initialData={getExcalidrawData()}
+            />
+        ) : (
+            <slot />
+        )
+    }
+</div>
