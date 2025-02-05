@@ -15,7 +15,7 @@ const isExcalidraw =
 function getExcalidrawData() {
     const body = Astro.props.entry.body;
     const expression = new RegExp(
-        "```compressed-json(?<content>[A-Z0-9+/=\n]+)```",
+        "```compressed-json(?<content>[A-Z0-9+/=\n\r]+)```",
         "i",
     );
     const match = body?.match(expression);
