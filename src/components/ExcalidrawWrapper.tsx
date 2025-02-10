@@ -10,8 +10,6 @@ interface ExcalidrawWrapperProps {
 function ExcalidrawWrapper({ initialData }: ExcalidrawWrapperProps) {
     const [excalidrawAPI, setExcalidrawAPI] = useState<ExcalidrawImperativeAPI | null>(null);
 
-    console.log(document.documentElement.attributes.getNamedItem('data-theme')?.value);
-
     useEffect(() => {
         if (!excalidrawAPI || !initialData) {
             return;
