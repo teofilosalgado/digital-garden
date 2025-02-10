@@ -3,6 +3,8 @@ import { Excalidraw } from '@excalidraw/excalidraw';
 import type { ExcalidrawImperativeAPI } from '@excalidraw/excalidraw/types/types';
 import { useEffect, useState } from 'react';
 
+import "@excalidraw/excalidraw/index.css";
+
 interface ExcalidrawWrapperProps {
     initialData: any;
 }
