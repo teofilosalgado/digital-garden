@@ -29,22 +29,22 @@ export default defineConfig({
                 {
                     label: 'Projects',
                     autogenerate: { directory: 'vault/1. Projects' },
-                    collapsed: false,
+                    collapsed: true,
                 },
                 {
                     label: 'Areas',
                     autogenerate: { directory: 'vault/2. Areas' },
-                    collapsed: false,
+                    collapsed: true,
                 },
                 {
                     label: 'Resources',
                     autogenerate: { directory: 'vault/3. Resources' },
-                    collapsed: false,
+                    collapsed: true,
                 },
                 {
                     label: 'Archive',
                     autogenerate: { directory: 'vault/4. Archive' },
-                    collapsed: false,
+                    collapsed: true,
                 }
             ],
             pagination: false,
