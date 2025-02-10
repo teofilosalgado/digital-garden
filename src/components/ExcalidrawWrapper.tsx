@@ -1,9 +1,9 @@
 'use client';
-import { Excalidraw } from '@excalidraw/excalidraw';
+import { Excalidraw, THEME } from '@excalidraw/excalidraw';
 import type { ExcalidrawImperativeAPI } from '@excalidraw/excalidraw/types/types';
 import { useEffect, useState } from 'react';
 
-import "@excalidraw/excalidraw/index.css";
+type ThemeType = (typeof THEME)[keyof typeof THEME];
 
 interface ExcalidrawWrapperProps {
     initialData: any;
@@ -34,7 +34,7 @@ function ExcalidrawWrapper({ initialData }: ExcalidrawWrapperProps) {
                 viewModeEnabled
                 excalidrawAPI={(api) => setExcalidrawAPI(api)}
                 initialData={initialData}
-                theme={document.documentElement.attributes.getNamedItem('data-theme')?.value || "dark"}
+                theme={(document.documentElement.attributes.getNamedItem('data-theme')?.value as ThemeType) || THEME.DARK}
             />
         </div>
     );
