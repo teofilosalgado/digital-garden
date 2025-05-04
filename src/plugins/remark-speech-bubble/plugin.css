@@ -26,3 +26,7 @@ li[data-task="3"] {
 li[data-task="4"] {
     background-color: var(--sl-color-blue-high);
 }
+
+li[data-task="7"] {
+    background-color: var(--sl-color-purple-high);
+}
