@@ -37,7 +37,7 @@ export default function remarkSpeechBubble() {
                     }))
                 }
             ];
-            console.log(node.children.at(0));
+            // console.log(node.children.at(0));
         });
     };
 }
