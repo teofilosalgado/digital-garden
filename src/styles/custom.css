@@ -37,6 +37,10 @@
     padding-left: 0px !important;
 }
 
+.sl-markdown-content ul li:not([data-task]) {
+  margin-left: 1rem;
+}
+
 .site-title span {
     font-weight: bold;
 }
