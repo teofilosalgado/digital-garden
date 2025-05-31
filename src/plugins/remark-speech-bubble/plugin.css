@@ -19,6 +19,10 @@ li[data-task="9"] {
     color: var(--sl-color-black);
 }
 
+li[data-task="2"] {
+    background-color: var(--sl-color-orange-high);
+}
+
 li[data-task="3"] {
     background-color: var(--sl-color-green-high);
 }
